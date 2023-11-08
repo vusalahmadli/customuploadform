@@ -3,6 +3,7 @@ Custom upload input feld.
 
 HTML:
 
+
 <div class="input-group mb-2 mt-3 col-12">
   <div class="custom-file">
     <input type="file" class="custom-file-input" id="anschreiben" style="opacity: 0">
@@ -11,16 +12,19 @@ HTML:
 </div>
 
 
+
+
 JQuery:
 
-$('#anschreiben').on('change', function() {
-  var filePath = $(this).val();
-    var fileName = filePath.replace("C:\\fakepath\\", "");
-    if (fileName) {
-                $('#label_anschreiben').text(fileName);
-  }
-});
-
+<script>
+  $('#anschreiben').on('change', function() {
+    var filePath = $(this).val();
+      var fileName = filePath.replace("C:\\fakepath\\", "");
+      if (fileName) {
+                  $('#label_anschreiben').text(fileName);
+    }
+  });
+</script>
 
 
 
